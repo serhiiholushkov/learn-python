@@ -1,5 +1,6 @@
 ## Create list example
 
+print("LISTS")
 # 1. The dummiest way
 square_list = []
 for i in range(10):
@@ -45,14 +46,21 @@ print(transposed)
 print(list(zip(*matrix)))
 
 
-# Tuples
+# looping over a list with index
+for i, v in enumerate(["tic", "tac", "toe"]):
+    print(f"Index: {i}, Value: {v}")
+
+
+print("TUPLES")
+## Tuples
 empty = ()
 singleton = (1,)  # Note the comma, otherwise it's just an int in parentheses
 pair = (1, 2)
 print(singleton)
 
 
-# sets
+print("SETS")
+## Sets
 empty_set = set()
 basket = {"apple", "banana", "orange"}
 print(basket)
@@ -71,3 +79,24 @@ print(letters_1 ^ letters_2)
 # set comprehension
 set_comprehension = {x for x in "abracadabra" if x not in "abc"}
 print(set_comprehension)
+
+
+print("DICTIONARIES")
+## Dictionaries
+empty_dict = {}
+tel = {"jack": 4098, "sape": 4139}
+tel["guido"] = 4127
+print(tel)
+print(tel["jack"])
+del tel["sape"]
+print(tel)
+print(list(tel.keys()))
+print(sorted(tel.keys()))
+print("guido" in tel)
+print("jack" not in tel)
+# dictionary comprehension
+dict_comprehension = {x: x * x for x in (2, 4, 6)}
+print(dict_comprehension)
+# iterating over keys and values
+for k, v in dict_comprehension.items():
+    print(f"{k}: {v}")
