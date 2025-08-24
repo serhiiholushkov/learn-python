@@ -3,6 +3,11 @@ class Dog:
     kind = "canine"  # class variable
     tricks = []  # class variable. Causes shared state issue!
 
+    # there is no private keyword in Python, but prefixing with underscore is a convention
+    _private_var = "I am private"
+    # or prefixing with double underscore for name mangling
+    __name_mangled_var = "I am name mangled"
+
     def __init__(self, name, age):
         self.name = name  # instance variable
         self.age = age  # instance variable
